@@ -34,7 +34,8 @@ int main(){
     printf("%d",binsearch(arr,5,2));
     printf("%d",binsearch(arr,5,3));
     printf("%d",binsearch(arr,5,4));
-    printf("%d",binsearch(arr,5,5));
+    printf("%d",binsearch(arr,5,9));  // not works with this so this is not a good code
+    // best practice for binary search is in 1t.c
     
     return 0;
 }
