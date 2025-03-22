@@ -5,13 +5,25 @@ struct node
  struct node *add;
 };
 
+void treaversal(struct node *number){
 
+
+struct Node* current = number;
+while (current != NULL) {
+    printf("%d -> ", current->data);
+    current = current->add;
+}
+printf("NULL\n");
+}
+// }
 int main(){
     
     struct node a;
     struct node b;
     struct node c;
     struct node d; struct node e;
+
+    
     a.data=1;
     a.add=&b;
 
@@ -25,14 +37,15 @@ int main(){
     d.add=&e; 
     
     e.data=5;
-    e.add=0;
+    e.add=NULL;
+
 struct node temp=a;
    
 
  do{
         printf("%d\t",temp.data);
         temp=*(temp.add);
-    } while (temp.add != 0);
+    } while (temp.add != NULL);
     
 
 
