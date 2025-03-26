@@ -8,9 +8,9 @@ struct node
 void treaversal(struct node *number){
 
 
-struct Node* current = number;
+struct node* current = number;
 while (current != NULL) {
-    printf("%d -> ", current->data);
+    printf("%d -> ", (*current).data);
     current = current->add;
 }
 printf("NULL\n");
@@ -39,14 +39,14 @@ int main(){
     e.data=5;
     e.add=NULL;
 
-struct node temp=a;
+struct node* temp=&a;
    
 
  do{
-        printf("%d\t",temp.data);
-        temp=*(temp.add);
-    } while (temp.add != NULL);
-    
+        printf("%d\t",temp->data);
+        temp=(temp->add);
+    } while (temp != NULL);
+   //we can NOT compare temp != NULL BUT  CAN COMPARE WITH ADDFRESS
 
 
     return 0;
